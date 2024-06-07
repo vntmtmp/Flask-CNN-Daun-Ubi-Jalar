@@ -42,7 +42,7 @@ Set up the necessary configurations in the `main.py` file.
 ## Usage
 To run the application, use the following command:
 ```sh
-python app.py
+python main.py
 ```
 The application will be available at `http://127.0.0.1:5000/`.
 
