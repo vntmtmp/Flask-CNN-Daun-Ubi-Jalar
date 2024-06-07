@@ -1,0 +1,26 @@
+{% extends "_layout_landing/layout.html" %}
+
+{% block title %}Landing{% endblock %}
+
+{% block content %}
+<section class="z-index-1 cta">
+    <div class="container">
+        <div class="row flex-center">
+            <div class="col-12">
+                <div class="card shadow h-100 py-5">
+                    <div class="card-body text-center">
+                        <h1 class="fw-semi-bold mb-4">Upload Gambar <span class="text-success">Daun Ubi Jalar</span> Untuk diklasifikasi</h1>
+                        <form method="post" enctype="multipart/form-data" action="{{ url_for('upload_file') }}">
+                            <div class="mb-3">
+                                <!-- <label for="file" class="form-label">Choose file to upload</label> -->
+                                <input class="form-control" type="file" id="file" name="file">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Upload</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

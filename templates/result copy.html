@@ -1,0 +1,53 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classification Result</title>
+</head>
+<body>
+    <h1>Hasil Klasifikasi</h1>
+    <p>Hasil Klasifikasi: <strong>{{ label }}</strong> dengan Persentase: <strong>{{ confidence }}%</strong></p>
+    <img src="{{ url_for('static', filename='klasifikasi_img/klasifikasi_img.jpg') }}" alt="Uploaded Image">
+    <a href="{{ url_for('upload_form') }}">Upload another image</a>
+</body>
+</html> -->
+
+{% extends "_layout_landing/layout.html" %}
+
+{% block title %}Landing{% endblock %}
+
+{% block content %}
+<section class="py-8" id="invest">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-xl-9 mb-3">
+          <div class="row">
+            <div class="col-lg-9 mb-3">
+              <h5 class="fw-bold fs-3 fs-lg-5 lh-sm mb-3">Hasil Klasifikasi</h5>
+              <!-- <p class="mb-5">Autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla</p> -->
+            </div>
+            <div class="col-md-6 mb-5 border shadow-lg rounded-3">
+              <div class="card text-white"><img class="card-img" src="{{ url_for('static', filename='klasifikasi_img/klasifikasi_img.jpg') }}" alt="..." />
+                <div class="card-img-overlay d-flex flex-column justify-content-center px-5 px-md-3 px-lg-5">
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mb-5">
+                <div class="col-md-6">
+                    <div class="card h-100 p-5 bg-body-tertiary border rounded-3">
+                      <h2>{{ label }}</h2>
+                      <p><strong></strong></p>
+                      <p>Dengan Persentase: {{ confidence }}%</p>
+                      <!-- <button class="btn btn-outline-secondary" type="button">Example button</button> -->
+                    </div>
+                  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end of .container-->
+
+  </section>
+{% endblock %}
