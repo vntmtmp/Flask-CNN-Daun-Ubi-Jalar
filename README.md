@@ -33,7 +33,7 @@ To get started with the project, follow these steps:
     ```
 
 ## Configuration
-Set up the necessary configurations in the `app.py` file.
+Set up the necessary configurations in the `main.py` file.
 
 - `UPLOAD_FOLDER`: The folder where uploaded files will be stored.
 - `ALLOWED_EXTENSIONS`: Allowed file extensions for uploads.
